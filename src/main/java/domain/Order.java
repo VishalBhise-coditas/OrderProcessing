@@ -13,6 +13,10 @@ public class Order {
         this.products = new ArrayList<>();
     }
 
+    public String getId() {
+        return id;
+    }
+
     public void addProduct(Product product) {
         products.add(product);
     }
