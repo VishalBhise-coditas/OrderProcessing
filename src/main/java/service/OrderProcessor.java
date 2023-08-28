@@ -1,19 +1,23 @@
 package service;
 
 import domain.Order;
+import domain.Product;
+import java.util.Map;
 
 public interface OrderProcessor {
 
-    void addNewProduct();
+    void addNewProduct(String id, String name, double price);
 
-    void removeProduct();
+    boolean removeProduct(String id);
 
-    void placeOrder();
+    boolean placeOrder(Order order);
 
-    void cancelOrder();
+    boolean cancelOrder(String orderId);
 
-    void listAllProducts();
+    Map<String, Product> listAllProducts();
 
-    void listAllOrders();
+    Map<String, Order> listAllOrders();
+
+    Product getProduct(String productId);
 
 }
